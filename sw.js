@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-1649f9704c3eb009ca22.js"
+    "url": "webpack-runtime-caa3e5567b47859fc76e.js"
   },
   {
     "url": "styles.fc5c5d93547f87092911.css"
@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "framework-fbe54114083bab4bd0a1.js"
   },
   {
-    "url": "app-b90dd8226e0475c99a81.js"
+    "url": "app-6606a3908c18da0539ab.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "6acc2fa0fd2c8b5378d71852dae5f0c5"
+    "revision": "6d52668daa9c35e7b09b1b3f63a5c255"
   },
   {
     "url": "SocialIcon-2d77e95a0330ad431763.js"
@@ -52,11 +52,35 @@ self.__precacheManifest = [
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-959d7e10e315cfbb0346.js"
   },
   {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "06dc6611507195cc247f81936f234e2b"
+  },
+  {
+    "url": "page-data/sq/d/1219725384.json",
+    "revision": "f2324041dc33dc23554db729ad3f78f4"
+  },
+  {
+    "url": "page-data/sq/d/2744294623.json",
+    "revision": "72aacfdad7fb0d2365afbdb542818c0b"
+  },
+  {
+    "url": "page-data/sq/d/3930633058.json",
+    "revision": "63a672ccbcb56b8956f284a84e7074b6"
+  },
+  {
+    "url": "page-data/sq/d/4125734515.json",
+    "revision": "ef7e1c1b49b5800983ba54e836f0d687"
+  },
+  {
+    "url": "page-data/app-data.json",
+    "revision": "75c5902419ef9a3258c0252179199e5d"
+  },
+  {
     "url": "polyfill-96b6c6ec8653d8d5d240.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "b10f49c91b7eca61c34fd644c2924237"
+    "revision": "1c17a0126ac8ea032b7f9907208ca370"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -143,12 +167,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/living-genes-example`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-b90dd8226e0475c99a81.js`))) {
+  if (!resources || !(await caches.match(`/living-genes-example/app-6606a3908c18da0539ab.js`))) {
     return await fetch(event.request)
   }
 
@@ -161,7 +185,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/living-genes-example/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
