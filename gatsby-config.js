@@ -2,7 +2,6 @@
 require("dotenv").config({ path: `.env` })
 const flattenMenu = require("@gatsbystorefront/gatsby-theme-storefront-shopify/src/utils/flattenMenu")
 
-
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -11,9 +10,9 @@ module.exports = {
     gatsbyStorefrontConfig: {
       storeName: 'Living Genes',
       storeDescription: 'Demo store description',
-      email: 'info@gatsbystorefront.com',
-      company: 'Gatsby Storefront Inc.',
-      location: 'New York, NY',
+      email: 'hello@moleculartestinglabs.com',
+      company: 'Molecular Testing Labs',
+      location: 'Vancouver, WA',
       address: '1 Centre St.',
       phone: '+1 (800) 123-1234',
       workingDays: 'Mon - Fri',
@@ -212,6 +211,7 @@ module.exports = {
       articlesPerBlogPage: '6',
     },
   },
+  pathPrefix: "/living-genes-example",
   plugins: [
     {
       resolve: '@gatsbystorefront/gatsby-theme-storefront-shopify',

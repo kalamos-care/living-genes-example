@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://demo.gatsbystorefront.com/sitemap.xml
-Host: https://demo.gatsbystorefront.com
