@@ -4,7 +4,7 @@ const flattenMenu = require("@gatsbystorefront/gatsby-theme-storefront-shopify/s
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Living Genes`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@bbthorson`,
     gatsbyStorefrontConfig: {
@@ -238,8 +238,8 @@ module.exports = {
           name: 'Living Genes',
           short_name: 'Living Genes',
           start_url: '/',
-          background_color: '#fff',
-          theme_color: '#333',
+          background_color: '#004643',
+          theme_color: '#f9bc60',
           display: 'standalone',
           icon: 'src/images/gatsby-icon.png',
           icon_options: {
