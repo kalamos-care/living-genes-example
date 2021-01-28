@@ -41,25 +41,11 @@ module.exports = {
           type: 'carousel',
           children: [
             {
-              name: 'Jewelery',
+              name: 'Infectious Disease',
               type: 'collection',
-              handle: 'jewelery',
+              handle: 'infectious-disease-dried-blood',
               textColor: 'black',
               textBgColor: 'white',
-            },
-            {
-              name: 'Apparel',
-              type: 'collection',
-              handle: 'apparel',
-              textColor: 'white',
-              textBgColor: 'primary',
-            },
-            {
-              name: 'Silk Summer Top',
-              type: 'product',
-              handle: 'silk-summer-top',
-              textColor: 'white',
-              textBgColor: 'primary',
             },
           ],
         },
